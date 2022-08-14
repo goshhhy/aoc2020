@@ -1,6 +1,5 @@
-#[macro_use] extern crate bencher;
-
 use bencher::Bencher;
+use bencher::{benchmark_group, benchmark_main};
 use aoc2020::{get_inputs, day1};
 
 fn day1p1b1(bench: &mut Bencher) {
