@@ -1,9 +1,12 @@
+extern crate bencher;
+
 use std::{
-    io::{self, Read},
     fmt::Debug,
     str::FromStr,
     path::Path
 };
+
+pub mod day1;
 
 pub fn get_inputs<T: FromStr>(name: &'static str) -> Vec<T> where <T as FromStr>::Err: Debug  {
     let path = Path::new("inputs").join(name);
