@@ -16,7 +16,7 @@ fn day1p1b2(bench: &mut Bencher) {
 
     bench.iter(|
         | {
-        day1::day1p1_2(inputs.to_owned())
+        day1::day1_f(inputs.to_owned(), 2)
     });
 }
 
@@ -34,7 +34,7 @@ fn day1p2b2(bench: &mut Bencher) {
 
     bench.iter(|
         | {
-        day1::day1p2_2(inputs.to_owned())
+            day1::day1_f(inputs.to_owned(), 3)
     });
 }
 
