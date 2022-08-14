@@ -13,7 +13,7 @@ fn day1p1(inputs: Vec<i32>) -> Option<i32> {
 }
 
 fn main() {
-    println!( "result: {}", day1p1(aoc2020::get_inputs()).unwrap() );
+    println!( "result: {}", day1p1(aoc2020::get_inputs("day1")).unwrap() );
 }
 
 #[cfg(test)]
@@ -25,3 +25,4 @@ mod tests {
         assert_eq!(day1p1(inputs).unwrap(), 514579);
     }
 }
+
