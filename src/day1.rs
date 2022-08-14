@@ -1,3 +1,5 @@
+use itertools::Itertools;
+
 pub fn day1p1(inputs: Vec<i32>) -> Option<i32> {
     for m in 0..inputs.len() {
         let s = &inputs[m..inputs.len()];
@@ -9,6 +11,13 @@ pub fn day1p1(inputs: Vec<i32>) -> Option<i32> {
     }
     None
 }
+
+pub fn day1p1_2(mut inputs: Vec<i32>) -> i32 {
+    inputs.drain(..).combinations_with_replacement(2)
+        .find(|v| v.iter().sum::<i32>() == 2020 )
+        .unwrap().iter().product::<i32>()
+}
+
 
 #[cfg(test)]
 mod tests {
