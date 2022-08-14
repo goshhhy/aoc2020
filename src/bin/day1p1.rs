@@ -1,9 +1,4 @@
-
-use std::{
-    io::{self, Read},
-    str::FromStr,
-};
-
+use aoc2020;
 
 fn day1p1(inputs: Vec<i32>) -> Option<i32> {
     for m in 0..inputs.len() {
@@ -18,16 +13,7 @@ fn day1p1(inputs: Vec<i32>) -> Option<i32> {
 }
 
 fn main() {
-    let mut string = String::new();
-    io::stdin().read_to_string(&mut string)
-        .expect("couldn't read input values.");
-
-    let inputs = string
-        .lines()
-        .map(i32::from_str)
-        .collect::<Result<Vec<_>, _>>().unwrap();
-
-    println!( "{}", day1p1(inputs).unwrap() );
+    println!( "result: {}", day1p1(aoc2020::get_inputs()).unwrap() );
 }
 
 #[cfg(test)]
